@@ -1,11 +1,16 @@
 $(document).ready(function () {
-    'use strict';
+	'use strict';
 
 	//********* page loader js
 
-	setTimeout(function () {
-		$('.loader_bg').fadeToggle();
-	}, 2000);
+	$(document).ready(function () {
+
+		setTimeout(function () {
+			$('body').addClass('loaded');
+			$('h1').css('color', '#222222');
+		}, 3000);
+
+	});
 
 
 	//********** menu background color change while scroll
@@ -82,15 +87,15 @@ $(document).ready(function () {
 		autoplay: true,
 		singleItem: true,
 		loop: true,
-		responsive:{
-			0:{
-				items:1
+		responsive: {
+			0: {
+				items: 1
 			},
-			680:{
-				items:2
+			680: {
+				items: 2
 			},
-			1000:{
-				items:3
+			1000: {
+				items: 3
 			}
 		}
 	});
@@ -109,13 +114,13 @@ $(document).ready(function () {
 		delegate: 'a',
 		removalDelay: 400, //delay removal by X to allow out-animation
 		callbacks: {
-			beforeOpen: function() {
+			beforeOpen: function () {
 				this.st.mainClass = this.st.el.attr('data-effect');
 			}
 		},
 		midClick: true
 	});
-	
+
 	//**** testimonial carousel
 
 	$("#testimonial-carousel").owlCarousel({
@@ -127,15 +132,15 @@ $(document).ready(function () {
 		autoplay: true,
 		singleItem: true,
 		loop: true,
-		responsive:{
-			0:{
-				items:1
+		responsive: {
+			0: {
+				items: 1
 			},
-			680:{
-				items:1
+			680: {
+				items: 1
 			},
-			1000:{
-				items:1
+			1000: {
+				items: 1
 			}
 		}
 	});
@@ -143,15 +148,15 @@ $(document).ready(function () {
 	//***********YTplayer js
 
 	$('.video-bg').mb_YTPlayer({
-		showControls:false,
-		autoPlay:true,
-		loop:true,
-		mute:true,
-		startAt:0,
-		opacity:1,
-		quality:'default'
+		showControls: false,
+		autoPlay: true,
+		loop: true,
+		mute: true,
+		startAt: 0,
+		opacity: 1,
+		quality: 'default'
 	});
-	
+
 
 
 });
