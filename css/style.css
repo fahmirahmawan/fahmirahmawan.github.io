@@ -114,7 +114,7 @@ img {
 /*-------------- 2. Preloader css starts ---------------*/
 
 #loader-wrapper {
-    position: fixed !important;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -123,7 +123,7 @@ img {
 }
 
 #loader {
-    display: block;
+    display: inline;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -312,6 +312,7 @@ img {
 .nav-area.sticky_navigation {
     background: black;
     height: 80px;
+
 }
 
 .navbar img {
@@ -591,6 +592,7 @@ canvas {
     float: right;
     text-decoration: none;
 }
+
 
 .about-text-right {
     margin-top: 90px;
@@ -1290,6 +1292,33 @@ canvas {
 }
 
 
+/* scroll on top */
+
+.top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #1EBBA3;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    animation: animate 1.5s infinite;
+    border-radius: 45%;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(15px);
+    }
+}
 
 
 /*--------------13. Footer area starts -------------*/

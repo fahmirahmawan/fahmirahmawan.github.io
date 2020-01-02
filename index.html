@@ -200,7 +200,7 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <img src="images/about/about-1.jpg" class="img-responsive" alt="about image">
+                    <img src="images/about/foto2.jpg" class="img-responsive" alt="about image">
                     <!--add your image here-->
                 </div>
 
@@ -993,6 +993,7 @@
                                     class="fa fa-twitter"></i></a>
                             <a href="https://www.youtube.com/channel/UC9HJyquIhkM_t84FzXmk4ew/" target="_blank"><i
                                     class="fa fa-youtube"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -1009,6 +1010,9 @@
 
 
     <!--Brand area ends-->
+
+
+    <div class="top"><i class="fa fa-chevron-circle-up fa-2x"></i></div>
 
     <!--Footer Area Starts-->
 
@@ -1146,6 +1150,24 @@
                 $('h1').css('color', '#222222');
             }, 3000);
 
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() < 300) {
+                    $('.top').css({
+                        "opacity": "1",
+                        "pointer-events": "auto"
+                    });
+                }
+            });
+            $('.top').click(function () {
+                $('html').animate({
+                    scrollTop: 0
+                }, 500)
+            });
         });
     </script>
 
